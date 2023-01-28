@@ -1,4 +1,4 @@
-resource "kubernetes_namespace" "example" {
+resource "kubernetes_namespace" "exa" {
   metadata {
     name = "ns-tfs"
   }
