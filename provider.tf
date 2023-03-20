@@ -13,7 +13,7 @@ provider "kubernetes" {
   }
 }
   provider "kubernetes"{
-    host = "https://172.23.129.23:8443"
+    host = "https://x.x.x.x:8443"
   }
 /*
 terraform {
