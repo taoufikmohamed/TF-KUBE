@@ -13,7 +13,7 @@ provider "kubernetes" {
   }
 }
   provider "kubernetes"{
-    host = "https://x.x.x.x:8443"
+    host = "https://x.x.x.x:8443"  # minikube ip (single node)  kubectl config view  
   }
 /*
 terraform {
