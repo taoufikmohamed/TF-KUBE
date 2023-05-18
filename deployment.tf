@@ -1,4 +1,4 @@
-resource "kubernetes_namespace" "exa" {
+resource "kubernetes_namespace" "nstfs" {
   metadata {
     name = "ns-tfs"
   }
@@ -10,11 +10,11 @@ resource "kubernetes_deployment" "exs" {
     labels = {
       test = "MyApp"
     }
-    namespace = "ns-tfs"
+    namespace = "nstfs"
   }
 
   spec {
-    replicas = 3
+    replicas = 1
 
     selector {
       match_labels = {
@@ -49,7 +49,7 @@ resource "kubernetes_deployment" "exs" {
     }
   }
 }
-
+/*
 resource "kubernetes_service" "svc-s" {
   metadata {
     name = "terraform-svc-s"
@@ -69,7 +69,7 @@ resource "kubernetes_service" "svc-s" {
 
      # type = "Nodeport"
   }
-  }
+  }*/
 /*
   #kubectl proxy --port=8080
    #output       #Starting to serve on 127.0.0.1:8080
