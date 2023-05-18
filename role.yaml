@@ -1,0 +1,11 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: default-role-test
+  namespace: ns-tfs
+
+rules:
+- apiGroups: ["*","apps","extensions"]
+  resources: ["deployment","pods","services","secrets","pods/log"]
+  verbs: ["get", "watch","list","create","update","delete","patch"]
+
