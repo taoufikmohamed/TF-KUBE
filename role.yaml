@@ -2,7 +2,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   name: default-role
-  namespace: ns-tfs
+  namespace: development
 
 rules:
 - apiGroups: ["*","apps","extensions"]

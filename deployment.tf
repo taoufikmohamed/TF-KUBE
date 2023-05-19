@@ -1,6 +1,6 @@
-resource "kubernetes_namespace" "nstfs" {
+resource "kubernetes_namespace" "development" {
   metadata {
-    name = "ns-tfs"
+    name = "development"
   }
 }
 
@@ -10,7 +10,7 @@ resource "kubernetes_deployment" "exs" {
     labels = {
       test = "MyApp"
     }
-    namespace = "nstfs"
+    namespace = "development"
   }
 
   spec {
